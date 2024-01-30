@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificaciones X Byron Studios</title>
+    <link rel="stylesheet" href="style.css">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+
+<!-- Animación de carga -->
+<div class="loading">
+	<div class="loading-icon">
+        <img src="carga.gif">
+        <h3 class="lt" style="white-space: nowrap;" >CARGANDO DATOS</h3>
+    </div>
+</div>
+<!-- Sistema de Refresh y Servidor -->
+<script>window.onload = function() {
+            // Mostrar la animación de carga
+            				           document.querySelector('.loading').style.display = 'block';
+
+            // Esperar 2 segundos (2000 milisegundos)
+            setTimeout(function() {
+                // Ocultar la animación de carga después de 2 segundos
+                             document.querySelector('.loading').style.display = 'none';
+            }, 2000);
+        };
+</script>
+<!-- Sistema para que no haga Zoom pero para que si puedan bajar -->
+<script> // JavaScript para permitir el desplazamiento vertical en dispositivos móviles window.onload = function() { // Obtener el alto de la ventana var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; // Establecer la altura mínima del contenedor para permitir el desplazamiento vertical document.querySelector('.container').style.minHeight = windowHeight + 'px'; }; </script>
+<!-- Final de sistema de Zoom -->
+				
+<div class="contenedor">
+    <h2>Tienda de Modificaciones MGG</h2>
+        <div class="juegos">
+       		 <!-- Juego 1 Inicio -->
+			<div class="juego">
+				<img src="db.jpg" alt="Juego 1">
+                <h3>Dragon Ball Z</h3>
+                <p>Pr&oacuteximamente</p>
+                <center>
+                <a href="prx.html">Descargar</a>
+                </center>
+            </div>
+             <!-- Juego 1 final -->
+	         <!-- Juego 2 Inicio -->
+            <div class="juego">
+                <img src="newworld.png" alt="Juego 4">
+                <div class="neww"><h3>New World 2</h3></div>
+                <p>03/05/2023</p>
+                <center>
+                <a href="prx.html">Descargar</a>
+                </center>
+            </div>
+             <!-- Juego 2 final -->
+             <!-- Juego 3 Inicio -->
+            <div class="juego">
+				<img src="snd.png" alt="Juego 2">
+                <div class="sunny"><h3>Sunny Day</h3></div>
+                <p>01/01/2023</p>
+                <center>
+                <a href="https://drive.google.com/file/d/1MGK3UnfANfx2zxTwjGIOqeKswMbUg5JH/view?usp=drive_link">Descargar</a>
+                </center>
+            </div>
+             <!-- Juego 3 final -->
+        	 <!-- Juego 4 Inicio -->
+            <div class="juego">
+				<img src="nvd1.png" alt="Juego 3">
+                <div class="navidad"><h3>Navidad</h3></div>
+                <p>01/12/2022</p>
+                <center>
+                <a href="https://drive.google.com/file/d/1F3LHPEpEKR8R5_w5zcD3qAep6youfHpY/view?usp=sharing">Descargar</a> 
+                </center>
+            </div>
+         
+        </div>
+</div>
+
+<nav class="barra-inferior">
+    <ul>
+        <li>
+            <a href="index.html" id="enlace-actualizar">Inicio</a>
+        </li>
+        <!-- Sistema de Actualizando Tienda -->
+        <script>
+        document.getElementById('enlace-actualizar').addEventListener('click', function(event) { event.preventDefault(); var fondoNegro = document.createElement('div'); fondoNegro.style.width = '100%'; fondoNegro.style.height = '100%'; fondoNegro.style.backgroundColor = 'black'; fondoNegro.style.position = 'fixed'; fondoNegro.style.top = '0'; fondoNegro.style.left = '0'; fondoNegro.style.zIndex = '9999'; var fondoCuadrado = document.createElement('div'); fondoCuadrado.style.width = '250px'; fondoCuadrado.style.height = '150px'; fondoCuadrado.style.backgroundColor = '#00ff00'; fondoCuadrado.style.borderRadius = '30px'; fondoCuadrado.style.position = 'fixed'; fondoCuadrado.style.top = '50%'; fondoCuadrado.style.left = '50%'; fondoCuadrado.style.transform = 'translate(-50%, -50%)'; fondoCuadrado.style.zIndex = '10000'; var mensaje = document.createElement('div'); mensaje.textContent = 'ACTUALIZANDO TIENDA..'; mensaje.className = 'animacion-actualizando'; mensaje.style.position = 'fixed'; mensaje.style.top = '50%'; mensaje.style.left = '50%'; mensaje.style.transform = 'translate(-50%, -50%)'; mensaje.style.color = 'black'; mensaje.style.zIndex = '10001'; mensaje.style.fontWeight = 'bold'; mensaje.style.fontSize = '16px'; mensaje.style.fontFamily = 'Arial, sans-serif'; document.body.appendChild(fondoNegro); document.body.appendChild(fondoCuadrado); document.body.appendChild(mensaje); setTimeout(function() { document.body.removeChild(fondoNegro); document.body.removeChild(fondoCuadrado); document.body.removeChild(mensaje); window.location.href = 'index.html'; }, 2000); }); 
+        </script>
+        <li>
+            <a class="terraza" href="terrazas.html">Terrazas</a>
+        </li>
+        <li>
+            <a href="redes.html">Comunicaci&oacuten</a>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>

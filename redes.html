@@ -50,5 +50,14 @@
 <!-- Soporte técnico -->
 	<section class="redes-sociales">
 <center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqAMygOkazmega1wb8J3Iejlln_8li6VUHjGJnFtR9AJf7eQ/viewform?embedded=true" width="380" height="290" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe></center></section>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'i')) {
+                event.preventDefault();
+            }
+        }); 
+    </script>
+
 </body>
 </html>

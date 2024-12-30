@@ -29,6 +29,15 @@
         <img src="giphy.gif">
     </div>
     <a href="index.html" class="back-btn">Regresar</a>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'i')) {
+                event.preventDefault();
+            }
+        }); 
+    </script>
+
 </body>
 </html>
 

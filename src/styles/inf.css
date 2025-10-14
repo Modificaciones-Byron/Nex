@@ -1,0 +1,143 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+/*todo lo que esta en medio*/
+        .container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-weight: bold;         
+            
+        }
+/*Color de Título"Dispositivos moviles"*/
+
+.animate-charcter{
+    left: center;
+    text-transform: uppercase; 
+    background-image: linear-gradient( -225deg, #00FFFF 0%, #00ff00 29%, #ff1361 67%, #fff800 100% ); 
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff; 
+    background-clip: text; 
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block; 
+    font-size: 40px; } @keyframes textclip { to { background-position: 200% center ; } }
+
+
+
+/*Tabla de Especificaciones*/
+        .device-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .device-item {
+            margin-bottom: 20px;
+                    }
+
+        .device-header {
+            cursor: pointer;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .device-details, .device-detailsx, .device-detailsi, .device-detailsr {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .device-details table, .device-detailsx table, .device-detailsi table, .device-detailsr table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .device-details th,
+        .device-details td, .device-detailsx th,
+        .device-detailsx td,   .device-detailsi th,
+        .device-detailsi td,  .device-detailsr th,
+        .device-detailsr td{
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #fff;
+        }
+
+        .device-details th, .device-detailsx th,   .device-detailsi th,   .device-detailsr th {
+            background-color: #555;
+        }
+
+        .device-details td, .device-detailsx td, .device-detailsi td, .device-detailsr td{
+            background-color: #333;
+        }
+
+        .device-details p, .device-detailsx p, .device-detailsi p, .device-detailsr p{
+            margin: 0;
+            padding: 5px;
+        }
+
+        
+/*Color de Boton Samsung*/
+.sam{
+    color: rgb(0, 191, 255); /* Valor RGB */
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+    font-size: 25px;	
+}
+
+/*Color de Boton Xiaomi*/
+.xia{
+					color: rgb(255, 165, 0);  
+				 text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+				 font-size: 25px;
+}
+
+/*Color de Boton Infinix*/
+.inf{
+					color: rgb(0, 255, 0);
+				 text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+				 font-size: 25px;
+}
+
+/*Color de Boton Realme*/
+.rea{
+					color: rgb(255, 255, 0);
+			  text-shadow: 0 0 10px rgba(255, 255, 0,			  				 0.8); 
+			  font-size: 25px;
+}
+/*Boton de Regresar*/
+.btn1 {
+      
+      text-align: center;
+      left: 32%;
+      top:  70%;
+      display: inline-block;
+      padding: 20px 35px;
+      background-color: #00ff00;
+      color: rgb(0, 0, 0);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      font-size: 25px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      
+    }
+
+.btn1:hover {
+      background-color: rgb(255, 0, 0);
+    }
+

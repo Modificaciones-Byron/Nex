@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animación de carga después de refrescar la página</title>
+    <style>
+        /* Estilos CSS para la animación de carga */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: yellow;
+            z-index: 10001;    
+            color: #000;
+            font-size: 16px;   
+            font-weight: bold;           
+}
+
+        
+
+        .loading .loading-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Estilos CSS para el contenido de la página */
+        /* Ajusta estos estilos a tu diseño específico */       
+    </style>
+    <!-- Animación de carga -->
+    <div class="loading">
+        <div class="loading-icon">
+            <!-- Coloca aquí tu animación de carga (por ejemplo, un GIF o un icono de carga) -->
+            <p>ACTUALIZANDO TIENDA</p>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar la animación de carga al recargar la página
+        window.onload = function() {
+            // Mostrar la animación de carga
+            document.querySelector('.loading').style.display = 'block';
+
+            // Esperar 2 segundos (2000 milisegundos)
+            setTimeout(function() {
+                // Ocultar la animación de carga después de 2 segundos
+                document.querySelector('.loading').style.display = 'none';
+            }, 2000);
+        };
+    </script>
+    <h1>Sistema de Refresh<br>Copyright 2023<br>Byron Studios<br>
+    </h1>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'i')) {
+                event.preventDefault();
+            }
+        }); 
+    </script>
+
+</body>
+</html>

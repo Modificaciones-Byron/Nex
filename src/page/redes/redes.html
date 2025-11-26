@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Modificaciones X</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/responsive.css">
+    <link rel="stylesheet" href="../../styles/redes.css">
+    <link rel="stylesheet" href="../../styles/components/bottom-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode font-poppins">
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <a href="../../../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="site-title">💬 Contacto</h1>
+            </div>
+            <div class="header-right">
+                <button id="themeBtn" class="theme-toggle">
+                    <span class="theme-icon"><i class="fas fa-moon"></i></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="social-section">
+            <br>
+            <h2 class="section-title">Nuestras Redes</h2>
+            <div class="social-grid">
+                <a href="https://www.facebook.com/byron.veraronquillo" class="social-btn facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://wa.me/+593980060452" class="social-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/byron_vera_p" class="social-btn instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:byronxstudios@gmail.com" class="social-btn gmail">
+                    <i class="fas fa-envelope"></i>
+                    <span>Gmail</span>
+                </a>
+                <a href="https://t.me/+rIMKB5rKGs0xNDgx" class="social-btn telegram" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://www.paypal.me/killer2029" class="social-btn paypal" target="_blank">
+                    <i class="fab fa-paypal"></i>
+                    <span>PayPal</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Bottom Navigation (Solo visible en móviles) -->
+    <nav class="bottom-nav" id="bottomNav">
+        <a href="../../../index.html" class="nav-link" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="../terrazas/terrazas.html" class="nav-link" data-page="terrazas">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Terrazas</span>
+        </a>
+        <a href="redes.html" class="nav-link active" data-page="contact">
+            <i class="fas fa-comments"></i>
+            <span>Contacto</span>
+        </a>
+        <a href="https://modificaciones-byron.github.io/Calculadora-de-Evo/" 
+        class="nav-link" 
+        data-page="calc" 
+        target="_blank">
+            <i class="fas fa-calculator"></i>
+            <span>Calculadora</span>
+        </a>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tema
+            const themeBtn = document.getElementById('themeBtn');
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                document.body.classList.toggle('dark-mode');
+                const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+                localStorage.setItem('theme', theme);
+                
+                // Actualizar icono
+                const icon = themeBtn.querySelector('.theme-icon i');
+                icon.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+            });
+
+            // Cargar tema guardado
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                const icon = themeBtn.querySelector('.theme-icon i');
+                icon.className = 'fas fa-sun';
+            }
+
+            // Bottom Nav - Actualizar link activo
+            const bottomNavLinks = document.querySelectorAll('.bottom-nav .nav-link');
+            
+            bottomNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Si no es un enlace con hash, actualizar activo
+                    if (!this.getAttribute('href').includes('#')) {
+                        bottomNavLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

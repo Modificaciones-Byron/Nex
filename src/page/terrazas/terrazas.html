@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrazas - Modificaciones X</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/responsive.css">
+    <link rel="stylesheet" href="../../styles/components/bottom-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(20, 20, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.75rem 0;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .bottom-nav .nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .bottom-nav .nav-link i {
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .bottom-nav .nav-link span {
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .bottom-nav .nav-link.active {
+            color: #00d9ff;
+        }
+
+        .bottom-nav .nav-link.active i {
+            transform: scale(1.2);
+        }
+
+        .bottom-nav .nav-link:not(.active):hover {
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Indicador activo */
+        .bottom-nav .nav-link.active::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #00d9ff, #00a8cc);
+            border-radius: 0 0 3px 3px;
+        }
+
+        /* Ajustar el main-content para que no quede debajo del bottom nav */
+        .main-content {
+            padding-bottom: 80px;
+        }
+
+        /* Ocultar en desktop */
+        @media (min-width: 768px) {
+
+            .main-content {
+                padding-bottom: 2rem;
+            }
+        }
+
+        /* Light mode */
+        body:not(.dark-mode) .bottom-nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        body:not(.dark-mode) .bottom-nav .nav-link {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        body:not(.dark-mode) .bottom-nav .nav-link.active {
+            color: #0099cc;
+        }
+
+        body:not(.dark-mode) .bottom-nav .nav-link:not(.active):hover {
+            color: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="dark-mode font-poppins">
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <a href="../../../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="site-title">🏝️ Terrazas</h1>
+            </div>
+            <div class="header-right">
+                <button id="themeBtn" class="theme-toggle">
+                    <span class="theme-icon"><i class="fas fa-moon"></i></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section2">
+            <h2 class="hero-title-main">Galería de Terrazas</h2>
+            <p class="hero-subtitle">Las mejores modificaciones de terrazas</p>
+            <div class="hero-scroll-indicator2">
+                <span>Desplázate para descubrir</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section class="mods-section">
+            <div id="terrazasGrid" class="cards-grid">
+                <!-- Cards generadas por JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation (Solo visible en móviles) -->
+    <nav class="bottom-nav" id="bottomNav">
+        <a href="../../../index.html" class="nav-link" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="terrazas.html" class="nav-link active" data-page="terrazas">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Terrazas</span>
+        </a>
+        <a href="../redes/redes.html" class="nav-link" data-page="contact">
+            <i class="fas fa-comments"></i>
+            <span>Contacto</span>
+        </a>
+        <a href="https://modificaciones-byron.github.io/Calculadora-de-Evo/" 
+        class="nav-link" 
+        data-page="calc" 
+        target="_blank">
+            <i class="fas fa-calculator"></i>
+            <span>Calculadora</span>
+        </a>
+    </nav>
+
+    <script>
+        const terrazasData = [
+            { id: 1, title: 'Lost City', image: '../../img/terrazas/1.png', link: '../../img/terrazas/1.png' },
+            { id: 2, title: 'City Utopica', image: '../../img/terrazas/2.png', link: '../../img/terrazas/2.png' },
+            { id: 3, title: 'Oscuridad Eterna', image: '../../img/terrazas/3.png', link: 'https://drive.google.com/file/d/1bbZPzKAspNNq0iBYDSYtUUs4aaiWAZcx/view?usp=sharing' },
+            { id: 4, title: 'Atlantis City', image: '../../img/terrazas/4.png', link: '../../img/terrazas/4.png' },
+            { id: 5, title: 'Devastación G', image: '../../img/terrazas/5.png', link: '../../img/terrazas/5.png' },
+            { id: 6, title: 'Evil City', image: '../../img/terrazas/6.png', link: '../../img/terrazas/6.png' },
+            { id: 7, title: 'Fenix C', image: '../../img/terrazas/8.png', link: '../../img/terrazas/8.png' },
+            { id: 8, title: 'City Future', image: '../../img/terrazas/7.png', link: '../../img/terrazas/7.png' },
+            { id: 9, title: 'City of Dreams', image: '../../img/terrazas/9.png', link: '../../img/terrazas/9.png' },
+            { id: 10, title: 'Sir Paladin', image: '../../img/terrazas/11.png', link: '../../img/terrazas/11.png' },
+            { id: 11, title: 'Fantasy City', image: '../../img/terrazas/10.png', link: '../../img/terrazas/10.png' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+        // Renderizar terrazas
+        const grid = document.getElementById('terrazasGrid');
+        grid.innerHTML = terrazasData.map(terraza => `
+            <div class="card">
+                <img src="${terraza.image}" alt="${terraza.title}" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">${terraza.title}</h3>
+                </div>
+                <div class="card-footer">
+                    <a href="${terraza.link}" download="${terraza.title}" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i>
+                        Descargar
+                    </a>
+                </div>
+            </div>
+        `).join('');
+
+            // Tema
+            const themeBtn = document.getElementById('themeBtn');
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                document.body.classList.toggle('dark-mode');
+                const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+                localStorage.setItem('theme', theme);
+                
+                // Actualizar icono
+                const icon = themeBtn.querySelector('.theme-icon i');
+                icon.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+            });
+
+            // Cargar tema guardado
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                const icon = themeBtn.querySelector('.theme-icon i');
+                icon.className = 'fas fa-sun';
+            }
+
+            // Bottom Nav - Actualizar link activo
+            const bottomNavLinks = document.querySelectorAll('.bottom-nav .nav-link');
+            
+            bottomNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Si no es un enlace con hash, actualizar activo
+                    if (!this.getAttribute('href').includes('#')) {
+                        bottomNavLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

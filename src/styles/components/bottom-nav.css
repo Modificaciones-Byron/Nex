@@ -1,0 +1,242 @@
+/* Bottom Navigation Fixed */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    flex: 1;
+    max-width: 80px;
+}
+
+.nav-link i {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    transition: var(--transition);
+}
+
+.nav-link span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    background: rgba(0, 255, 136, 0.15);
+}
+
+.nav-link.active i {
+    transform: translateY(-2px);
+}
+
+/* Ajustar el padding del main content para el bottom nav */
+.main-content {
+    padding-bottom: 70px;
+}
+
+/* Light mode adjustments */
+.light-mode .bottom-nav {
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid var(--border-light);
+}
+
+.light-mode .nav-link:hover {
+    background: rgba(0, 204, 106, 0.1);
+}
+
+.light-mode .nav-link.active {
+    background: rgba(0, 204, 106, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bottom-nav {
+        padding: 0.4rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.4rem 0.5rem;
+        max-width: 70px;
+    }
+    
+    .nav-link i {
+        font-size: 1.1rem;
+    }
+    
+    .nav-link span {
+        font-size: 0.65rem;
+    }
+    
+    .main-content {
+        padding-bottom: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-nav {
+        padding: 0.3rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.3rem 0.4rem;
+        max-width: 60px;
+    }
+    
+    .nav-link i {
+        font-size: 1rem;
+    }
+    
+    .nav-link span {
+        font-size: 0.6rem;
+    }
+    
+    .main-content {
+        padding-bottom: 60px;
+    }
+}
+
+/* Estilos para Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.75rem 0;
+    z-index: 999;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-nav .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bottom-nav .nav-link i {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.bottom-nav .nav-link span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.bottom-nav .nav-link.active {
+    color: #00d9ff;
+}
+
+.bottom-nav .nav-link.active i {
+    transform: scale(1.2);
+}
+
+.bottom-nav .nav-link:not(.active):hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Indicador activo */
+.bottom-nav .nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d9ff, #00a8cc);
+    border-radius: 0 0 3px 3px;
+}
+
+/* Ajustar el main-content para que no quede debajo del bottom nav */
+.main-content {
+    padding-bottom: 80px;
+}
+
+/* Ocultar en desktop */
+@media (min-width: 768px) {
+
+    .main-content {
+        padding-bottom: 2rem;
+    }
+}
+
+/* Light mode */
+body:not(.dark-mode) .bottom-nav {
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .bottom-nav .nav-link {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+body:not(.dark-mode) .bottom-nav .nav-link.active {
+    color: #0099cc;
+}
+
+body:not(.dark-mode) .bottom-nav .nav-link:not(.active):hover {
+    color: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.05);
+}
+/* Forzar colores en light mode para body */
+body.light-mode .bottom-nav {
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .bottom-nav .nav-link {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+body.light-mode .bottom-nav .nav-link.active {
+    color: #00cc6a;
+}
+
+body.light-mode .bottom-nav .nav-link:not(.active):hover {
+    color: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .bottom-nav .nav-link.active::before {
+    background: linear-gradient(90deg, #00cc6a, #00a858);
+}

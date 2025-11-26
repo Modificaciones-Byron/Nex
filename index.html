@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mods Fast X Studios - Tienda MGG</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
+    <link rel="stylesheet" href="src/styles/components/bottom-nav.css">
+    <link rel="icon" type="image/x-icon" href="src/img/resource/IconsRS/iconoCompany.png">
+    <!-- Tailwind CDN para desarrollo rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="dark-mode font-poppins">
+    <!-- Loading Screen mejorado -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>    
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <h3 class="loading-text">CARGANDO MODIFICACIONES...</h3>
+            <p class="loading-subtext">Preparando la mejor experiencia</p>
+        </div>
+    </div>
+
+    <!-- Header mejorado -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="src/img/resource/IconsRS/iconoCompany.png" alt="Logo" class="logo">
+                <h1 class="site-title">Modificaciones <span class="highlight">X</span></h1>
+            </div>
+            <div class="header-right">
+                <button id="themeBtn" class="theme-toggle">
+                    <span class="theme-icon"><i class="fas fa-moon"></i></span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar/Navigation mejorado -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menú Principal</h3>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <a href="index.html" class="sidebar-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="src/page/terrazas/terrazas.html" class="sidebar-link" data-section="terrazas">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Terrazas</span>
+                </a>
+            </li>
+            <li>
+                <a href="src/page/redes/redes.html" class="sidebar-link" data-section="contact">
+                    <i class="fas fa-comments"></i>
+                    <span>Contacto</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://modificaciones-byron.github.io/Calculadora-de-Evo/" 
+                data-page="calc" class="sidebar-link"
+                target="_blank">
+                    <i class="fas fa-calculator"></i>
+                    <span>Calculadora</span>
+                </a>
+            </li>
+            <li>
+                <a href="src/page/instalar/instalar.html#method2" class="sidebar-link">
+                    <i class="fas fa-tools"></i>
+                    <span>MK Manager</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-star"></i>
+                    <span>Destacados</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-history"></i>
+                    <span>Historial</span>
+                </a>
+            </li>
+            <li>
+                <a href="src/page/instalar/instalar.html" class="sidebar-link" data-section="install">
+                    <i class="fas fa-question-circle"></i>
+                    <span>¿Cómo instalar?</span>
+                </a>
+            </li>
+            
+        </ul>
+        <div class="sidebar-footer">
+            <p>&copy; 2025 Fast X Studios</p>
+        </div>
+    </nav>
+
+    <!-- Main Content mejorado -->
+    <main class="main-content">
+        <!-- Hero Section mejorada -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+            </div>
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    <span class="hero-title-main">Tienda de Modificaciones</span>
+                    <span class="hero-title-sub">MGG</span>
+                </h2>
+                <p class="hero-subtitle">Descarga las mejores modificaciones y terrazas para tus juegos favoritos</p>
+                <div class="hero-actions">
+                    <a href="#modsGrid" class="cta-button primary">
+                        <i class="fas fa-download"></i>
+                        <span>Explorar Mods</span>
+                    </a>
+                    <a href="https://modificaciones-byron.github.io/Calculadora-de-Evo/" class="cta-button secondary"
+                    data-page="calc" 
+                    target="_blank">>
+                        <i class="fas fa-calculator"></i>
+                        <span>Calculadora de Evo</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator3">
+                <span>Desplázate para descubrir</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="5000">0</h3>
+                        <p class="stat-label">Descargas Totales</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="3">0</h3>
+                        <p class="stat-label">Mods Disponibles</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="100">0</h3>
+                        <p class="stat-label">Usuarios Activos</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="4.9">0</h3>
+                        <p class="stat-label">Valoración Media</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mods Grid mejorado -->
+        <section id="modsGrid" class="mods-section">
+            <div class="section-header">
+                <h2 class="section-title">Modificaciones Disponibles</h2>
+                <p class="section-subtitle">Las mejores modificaciones para mejorar tu experiencia de juego</p>
+            </div>
+            <div class="mods-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="juego">Juegos</button>
+                <button class="filter-btn" data-filter="textura">Texturas</button>
+                <button class="filter-btn" data-filter="personaje">Personajes</button>
+            </div>
+            <div class="cards-grid">
+                <!-- Cards generadas por JavaScript -->
+            </div>
+        </section>
+
+        <!-- Features Section mejorada -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+                <p class="section-subtitle">Ofrecemos la mejor experiencia en modificaciones para juegos</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>Todas nuestras modificaciones son seguras, probadas y libres de malware</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Optimizado Móvil</h3>
+                    <p>Diseño completamente responsive para todos los dispositivos móviles</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Actualizaciones Constantes</h3>
+                    <p>Siempre mantenemos las últimas versiones disponibles para ti</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Nuestro equipo de soporte está disponible para ayudarte en cualquier momento</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Instalación Rápida</h3>
+                    <p>Proceso de instalación simplificado para que empieces a jugar rápido</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Calidad Premium</h3>
+                    <p>Modificaciones de alta calidad</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section 
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Mantente Actualizado</h2>
+                    <p>Recibe notificaciones sobre nuevas modificaciones y actualizaciones</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Suscribirse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <!-- Footer mejorado -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="src/img/resource/IconsRS/iconoCompany.png" alt="Logo">
+                    <h3>Mods X</h3>
+                </div>
+                <p>La mejor tienda de modificaciones para tus juegos favoritos. Calidad, seguridad y diversión garantizadas.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="src/page/terrazas/terrazas.html">Terrazas</a></li>
+                    <li><a href="src/page/redes/redes.html">Contacto</a></li>
+                    <li><a href="https://modificaciones-byron.github.io/Calculadora-de-Evo/">Calculadora</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categorías</h4>
+                <ul>
+                    <li><a href="index.html">Juegos</a></li>
+                    <li><a href="index.html">Texturas</a></li>
+                    <li><a href="index.html">Personajes</a></li>
+                    <li><a href="index.html">Mapas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Soporte</h4>
+                <ul>
+                    <li><a href="index.html">Centro de Ayuda</a></li>
+                    <li><a href="index.html">FAQ</a></li>
+                    <li><a href="index.html">Términos de Servicio</a></li>
+                    <li><a href="index.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Modificaciones X Byron Studios. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Solo visible en móviles) -->
+    <nav class="bottom-nav" id="bottomNav">
+        <a href="index.html" class="nav-link active" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="src/page/terrazas/terrazas.html" class="nav-link" data-page="terrazas">  <!-- SIN active ✅ -->
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Terrazas</span>
+        </a>
+        <a href="src/page/redes/redes.html" class="nav-link" data-page="contact">
+            <i class="fas fa-comments"></i>
+            <span>Contacto</span>
+        </a>
+        <a href="https://modificaciones-byron.github.io/Calculadora-de-Evo/" 
+        class="nav-link" 
+        data-page="calc" 
+        target="_blank">
+            <i class="fas fa-calculator"></i>
+            <span>Calculadora</span>
+        </a>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="src/js/app/app.js"></script>
+    <script src="src/js/app/utils.js"></script>
+    <script>
+        // Script para manejar el Bottom Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const bottomNavLinks = document.querySelectorAll('.bottom-nav .nav-link');
+            const currentPage = window.location.pathname;
+            
+            // Actualizar link activo según la página actual
+            bottomNavLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                
+                // Remover active de todos
+                link.classList.remove('active');
+                
+                // Agregar active al link correspondiente
+                if (currentPage.includes(href) || 
+                    (href === 'index.html' && (currentPage === '/' || currentPage.endsWith('/')))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Click handlers para animaciones
+            bottomNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Si es un enlace con hash (#), no prevenir default
+                    if (!this.getAttribute('href').startsWith('#')) {
+                        bottomNavLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

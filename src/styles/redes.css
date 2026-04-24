@@ -1,0 +1,69 @@
+.social-section {
+    padding: 5rem 1rem 2rem;
+    text-align: center;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: var(--background-card);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--text-light);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+}
+
+.social-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.social-btn.facebook { border-color: #1877f2; color: #1877f2; }
+.social-btn.facebook:hover { background: #1877f2; color: white; }
+.social-btn.whatsapp { border-color: #25D366; color: #25D366; }
+.social-btn.whatsapp:hover { background: #25D366; color: white; }
+.social-btn.instagram { border-color: #E4405F; color: #E4405F; }
+.social-btn.instagram:hover { background: #E4405F; color: white; }
+.social-btn.gmail { border-color: #EA4335; color: #EA4335; }
+.social-btn.gmail:hover { background: #EA4335; color: white; }
+.social-btn.telegram { border-color: #0088CC; color: #0088CC; }
+.social-btn.telegram:hover { background: #0088CC; color: white; }
+.social-btn.paypal { border-color: #003087; color: #003087; }
+.social-btn.paypal:hover { background: #003087; color: white; }
+
+@media (max-width: 768px) {
+    .social-section {
+        padding: 4rem 0.75rem 1.5rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .social-btn {
+        padding: 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .social-btn i {
+        font-size: 1.3rem;
+    }
+}

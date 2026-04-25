@@ -10,7 +10,7 @@ const modsData = [
         images: ['src/img/terrazas/5.png', 'src/img/resource/Mods/Devastacion/DevastacionPvP.png'],
         link: 'https://drive.google.com/file/d/1iFRHKD6Mcgh46mKwNU1j1hVNUoXZbffB/view?usp=sharing',
         description: 'En la devastación, solo los destructores reinan.',
-        downloads: 347,
+        downloads: 542,
         rating: 3.9,
         featured: true
     },
@@ -24,7 +24,7 @@ const modsData = [
         images: ['src/img/terrazas/2.png', 'src/img/resource/Mods/CityUtopica/CityUtopicaPvP.png'],
         link: 'https://drive.google.com/file/d/19BOpbpCmiIRM7jn_RcX4JI2xflu3vzLV/view?usp=sharing',
         description: 'En el futuro, solo los fuertes vencen.',
-        downloads: 234,
+        downloads: 845,
         rating: 4.0,
         featured: true
     },
@@ -38,7 +38,7 @@ const modsData = [
         images: ['src/img/terrazas/3.png', 'src/img/resource/Mods/OscuridadEterna/OscuridadEternaPvP.png'],
         link: 'https://drive.google.com/file/d/1zEWOb0Fhea2bkd2Loqs33x9NSA9rQfY4/view?usp=sharing',
         description: 'La oscuridad nunca descansa… ¿y tú?',
-        downloads: 123,
+        downloads: 645,
         rating: 4.0,
         featured: true
     },
@@ -52,7 +52,7 @@ const modsData = [
         images: ['src/img/resource/Mods/NavidadEdition/NavidadEditionTerraza.png', 'src/img/resource/Mods/NavidadEdition/NavidadEditionPvP.png'],
         link: 'https://drive.google.com/file/d/1F3LHPEpEKR8R5_w5zcD3qAep6youfHpY/view?usp=sharing',
         description: 'Esta Navidad, pelea o congélate.',
-        downloads: 2980,
+        downloads: 2987,
         rating: 4.7,
         featured: true
     },
@@ -66,7 +66,7 @@ const modsData = [
         images: ['src/img/resource/Mods/SunnyDay/SunnyDayTerraza.png', 'src/img/resource/Mods/SunnyDay/SunnyDayPvP.png'],
         link: 'https://drive.google.com/file/d/1MGK3UnfANfx2zxTwjGIOqeKswMbUg5JH/view?usp=drive_link',
         description: 'Día soleado para destrozar rivales.',
-        downloads: 3210,
+        downloads: 3219,
         rating: 4.9,
         featured: false
     },
@@ -80,7 +80,7 @@ const modsData = [
         images: ['src/img/resource/Mods/NewWorld/NewWorldTerraza.png', 'src/img/resource/Mods/NewWorld/NewWorldPvP.png'],
         link: 'https://drive.google.com/file/d/1yPFCEQdn7CMQkDjYQB9g5AiDPr1s5iyY/view?usp=drive_link',
         description: 'Nuevo mundo, mismas reglas: gana o muere.',
-        downloads: 1870,
+        downloads: 1878,
         rating: 4.6,
         featured: false
     },
